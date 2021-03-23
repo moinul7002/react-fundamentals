@@ -4,7 +4,6 @@ import BookList from "./components/BookList";
 function App() {
   return (
     <>
-      <p>Learn React : Fundamentals</p>
       <BookList />
     </>
   );

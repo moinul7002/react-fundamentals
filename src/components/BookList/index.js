@@ -1,42 +1,15 @@
 import React from "react";
+import bookData from "./data";
+import Book from "./bookComponent";
 
-const firstBook = {
-  image: "",
-  title: "Long Time No See",
-  author: "Ana Hathaway",
-};
+import "./index.css";
 
-const secondBook = {
-  image: "",
-  title: "Mi Amore",
-  author: "Ana Hathaway",
-};
-
-const Book = ({ image, title, author }) => {
-  return (
-    <article className="book">
-      <img src={image} alt="" />
-      <h1>{title}</h1>
-      <h4>{author}</h4>
-    </article>
-  );
-};
+const mapAllBooks = bookData.map((singleBook) => {
+  return <Book key={singleBook.id} {...singleBook} />;
+});
 
 const BookList = () => {
-  return (
-    <section className="booklist">
-      <Book
-        image={firstBook.image}
-        title={firstBook.title}
-        author={firstBook.author}
-      />
-      <Book
-        image={secondBook.image}
-        title={secondBook.title}
-        author={secondBook.author}
-      />
-    </section>
-  );
+  return <section className="booklist">{mapAllBooks}</section>;
 };
 
 export default BookList;
