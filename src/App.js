@@ -1,11 +1,11 @@
-import "./App.css";
-import BookList from "./components/BookList";
+import CounterExample from "./components/useState/counter";
 
 function App() {
   return (
-    <>
-      <BookList />
-    </>
+    <div className="container">
+      <h2>Advanced React 2021</h2>
+      <CounterExample />
+    </div>
   );
 }
 
